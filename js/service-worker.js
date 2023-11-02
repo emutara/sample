@@ -16,6 +16,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     // キャッシュしたいファイルを指定
     caches.open(cacheName).then(cache => {
+      debugger
       console.log("[Service Worker] Caching all: app shell and content");
       return cache.addAll(urlsToCache)//cache.addAll cache.open で指定したキャッシュ空間に対象となるファイルを保存する関数です。
     }).catch(function(e){
