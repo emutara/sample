@@ -2,9 +2,12 @@
 const cacheName = 'v1';
 var urlsToCache = [
   // '/',
-  // '/index.html',
-  '/emutara.github.io/sample/manifest.json',
-  '/emutara.github.io/sample/js/service-worker.js',
+  '/index.html',
+  // '/manifest.json',
+  // '/js/service-worker.js',
+
+  // '/emutara.github.io/sample/manifest.json',
+  // '/emutara.github.io/sample/js/service-worker.js',
 ];
 
 // インストール時に実行されるイベント --- (*2)
