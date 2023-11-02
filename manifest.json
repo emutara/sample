@@ -4,9 +4,9 @@
       "icons": [{ 
       "src": "/img/icon.jpeg",
       "sizes": "120x120",
-      "type": "image/png"
+      "type": "image/jpeg"
     }],
-    "start_url": "/index.html", 
+    "start_url": "index.html", 
     "display": "standalone", 
     "orientation": "portrait",
     "gcm_sender_id": "777816644693",
