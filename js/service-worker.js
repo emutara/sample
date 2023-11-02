@@ -1,7 +1,7 @@
 // キャッシュしたいファイルの一覧を指定 --- (*1)
 const cacheName = 'v1';
 var urlsToCache = [
-  'sample/',
+  '/sample',
   // '/index.html',
   '/sample/manifest.json',
   '/sample/js/service-worker.js',
