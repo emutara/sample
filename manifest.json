@@ -2,7 +2,7 @@
     "name": "テストアプリ", 
     "short_name": "テスアプ", 
       "icons": [{ 
-      "src": "./img/icon.jpeg",
+      "src": "/img/icon.jpeg",
       "sizes": "120x120",
       "type": "image/png"
     }],
