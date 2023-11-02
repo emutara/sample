@@ -2,11 +2,11 @@
     "name": "テストアプリ", 
     "short_name": "テスアプ", 
       "icons": [{ 
-      "src": "/img/icon.jpeg",
+      "src": "/sample/img/icon.jpeg",
       "sizes": "120x120",
       "type": "image/jpeg"
     }],
-    "start_url": "index.html", 
+    "start_url": "/sample/index.html", 
     "display": "standalone", 
     "orientation": "portrait",
     "gcm_sender_id": "777816644693",
