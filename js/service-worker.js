@@ -1,10 +1,10 @@
 // キャッシュしたいファイルの一覧を指定 --- (*1)
 const cacheName = 'v1';
 var urlsToCache = [
-  '/',
+  // '/',
   // '/index.html',
-  '/manifest.json',
-  '/js/service-worker.js',
+  './manifest.json',
+  './js/service-worker.js',
 ];
 
 // インストール時に実行されるイベント --- (*2)
