@@ -1,0 +1,15 @@
+{
+    "name": "テストアプリ", 
+    "short_name": "テスアプ", 
+      "icons": [{ 
+      "src": "./img/icon.jpeg",
+      "sizes": "120x120",
+      "type": "image/png"
+    }],
+    "start_url": "/index.html", 
+    "display": "standalone", 
+    "orientation": "portrait",
+    "gcm_sender_id": "777816644693",
+    "background_color": "#2196F3"
+  }
+  
