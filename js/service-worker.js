@@ -2,7 +2,7 @@
 const cacheName = 'v1';
 var urlsToCache = [
   '/',
-  '/index.html',
+  // '/index.html',
   '/manifest.json',
   '/js/service-worker.js',
 ];
