@@ -15,6 +15,9 @@ self.addEventListener('install', event => {
     caches.open(cacheName).then(cache => {
       console.log("[Service Worker] Caching all: app shell and content");
       return cache.addAll(urlsToCache)//cache.addAll cache.open で指定したキャッシュ空間に対象となるファイルを保存する関数です。
+    }).catch(function(e){
+      console.log("[Service Worker] Caching failed");
+      console.log(e)
     })
   )
 });
