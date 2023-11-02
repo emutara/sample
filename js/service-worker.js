@@ -1,10 +1,10 @@
 // キャッシュしたいファイルの一覧を指定 --- (*1)
 const cacheName = 'v1';
 var urlsToCache = [
-  // '/',
-  '/index.html',
-  // '/manifest.json',
-  // '/js/service-worker.js',
+  '/',
+  // '/index.html',
+  '/manifest.json',
+  '/js/service-worker.js',
 
   // '/emutara.github.io/sample/manifest.json',
   // '/emutara.github.io/sample/js/service-worker.js',
