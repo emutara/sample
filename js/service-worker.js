@@ -29,26 +29,41 @@ self.addEventListener('install', event => {
 // インストール後に実行されるイベント
 self.addEventListener('activate', e => {
   // 必要に応じて古いキャッシュの削除処理などを行う
-  e.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(
-        keyList.map((key) => {
-          if (key !== cacheName) {
-            return caches.delete(key);
-          }
-        }),
-      );
-    }),
-  );
+  // e.waitUntil(
+  //   caches.keys().then((keyList) => {
+  //     return Promise.all(
+  //       keyList.map((key) => {
+  //         if (key !== cacheName) {
+  //           return caches.delete(key);
+  //         }
+  //       }),
+  //     );
+  //   }),
+  // );
 });
 
 // リソースフェッチ時のキャッシュロード処理
-self.addEventListener('fetch', function(event) {
+// self.addEventListener('fetch', function(event) {
+//   event.respondWith(
+//       caches
+//           .match(event.request)
+//           .then(function(response) {
+//               return response ? response : fetch(event.request);
+//           })
+//   );
+// });
+self.addEventListener('fetch', event => {
+  // 繧ｭ繝｣繝�す繝･縺後≠繧後�繧ｭ繝｣繝�す繝･繧定ｿ斐☆
   event.respondWith(
-      caches
-          .match(event.request)
-          .then(function(response) {
-              return response ? response : fetch(event.request);
-          })
-  );
+    caches.match(event.request).then(function(resp) {
+      return resp || fetch(event.request).then(function(response) {
+        let responseClone = response.clone();
+        caches.open(cacheName).then(function(cache) {
+          cache.put(event.request, responseClone);
+        });
+        return response;
+      });
+    }).catch(function() {
+      return caches.match('logo.svg');
+    }));
 });
